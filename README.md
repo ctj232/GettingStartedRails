@@ -13,3 +13,4 @@ A repository of tutorial code to get started learning Rails for the ACM eSports 
 * Deploying to heroku seems relatively easy from the railstutorial book. Remember that bin/{rails,rake,bundle} have their ruby version in the #!/ line ... heroku uses a version different from 2.3
 * heroku also uses postgresql instead of sqlite3 ... so the Gemfile needs to be edited to reflect that
 * run database migrations on heroku as well with `heroku run rake db:migrate`
+* I have encountered [problems with `rails generate ...` just hanging](http://stackoverflow.com/questions/24622568/rails-generate-model-hangs), I was able to fix it by running `ps aux | grep "spring"` and `kill -TERM <pid>` for all PIDs associated with the spring process.
